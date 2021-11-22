@@ -6,7 +6,7 @@ export const ToyList: FC = () => {
   const {
     isLoading: isLoadingToys,
     data: toys,
-    isFetching: isRefresingToys,
+    isFetching: isRefreshingToys,
     refetch: refetchToys,
   } = useToys();
 
@@ -20,7 +20,7 @@ export const ToyList: FC = () => {
 
   return (
     <div>
-      {isRefresingToys ? <div>Refreshing...</div> : null}
+      {isRefreshingToys ? <div>Refreshing...</div> : null}
       <ul>
         {toys.map((toy) => (
           <Toy name={toy} key={toy} />
